@@ -1,6 +1,9 @@
 const { Client, GatewayIntentBits, AttachmentBuilder, EmbedBuilder, Embed  } = require('discord.js');
-const { token, id } = require('./setting.json')
+const { id } = require('./setting.json')
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+require('dotenv').config();
+const token = process.env.DISCORD_TOKEN;
+
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);

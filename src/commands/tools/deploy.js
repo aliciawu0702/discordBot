@@ -1,6 +1,10 @@
 const { REST, Routes, SlashCommandBuilder } = require('discord.js');
-const { token, id } = require('../../../setting.json');
+const {  id } = require('../../../setting.json');
 const { Client, GatewayIntentBits } = require('discord.js');
+
+
+require('dotenv').config();
+const token = process.env.DISCORD_TOKEN;
 
 //#region old
 const commands = [

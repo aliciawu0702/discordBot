@@ -4,7 +4,7 @@
 	"engines": {
 		"node": "^18.15.0",
 		"npm": "^9.5.0"
-	  },
+	},
 	"description": "Bot",
 	"main": "index.js",
 	"author": "",
@@ -17,6 +17,7 @@
 		"@discordjs/voice": "^0.15.0",
 		"discord.js": "^14.8.0",
 		"distube": "^4.0.3",
+		"dotenv": "^16.0.3",
 		"express": "^4.13.2"
 	}
 }
