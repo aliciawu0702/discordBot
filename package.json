@@ -2,15 +2,14 @@
 	"name": "DiceBot",
 	"version": "1.0.0",
 	"engines": {
-		"node": "^18.15.0",
-		"npm": "^9.5.0"
+		"node": "^18.15.0"
 	},
 	"description": "Bot",
 	"main": "index.js",
 	"author": "",
 	"license": "ISC",
 	"scripts": {
-		"start": "node index.js",
+		"start": "node index.js & node src\\commands\\tools\\deploy.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"dependencies": {
