@@ -1,7 +1,19 @@
 const { Client, GatewayIntentBits, AttachmentBuilder, EmbedBuilder, Embed  } = require('discord.js');
 const { token, id } = require('./setting.json')
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const express = require('express')
+const path = require('path')
 
+const PORT = process.env.PORT || 5001
+
+express()
+  .use(express.static(path.join(__dirname, 'public')))
+  .set('views', path.join(__dirname, 'views'))
+  .set('view engine', 'ejs')
+  .get('/', (req, res) => res.render('pages/index'))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
+  
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
