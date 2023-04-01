@@ -2,7 +2,7 @@
 	"name": "DiceBot",
 	"version": "1.0.0",
 	"description": "Bot",
-	"main": "bot.js",
+	"main": "index.js",
 	"author": "",
 	"license": "ISC",
 	"scripts": {
