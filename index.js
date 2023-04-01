@@ -25,7 +25,8 @@ client.on('interactionCreate', async interaction => {
     break;
 
     case '海夭占卜':
-        const sayAry = ['你今天會衰', '小心被狗咬褲子', '你好像有點好運','天吶~你出運了!','你頭上一個字『危』','大吉大利今晚吃雞','小心上廁所沒衛生紙']
+        const sayAry = ['你今天會衰', '小心被狗咬褲子', '你好像有點好運','天吶~你出運了!','你頭上一個字『危』',
+        '大吉大利今晚吃雞','小心上廁所沒衛生紙','今天會被騙財~','今天會被騙色~']
         await interaction.reply(sayAry[(number%7)]);
         break;
 
