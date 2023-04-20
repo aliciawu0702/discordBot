@@ -64,6 +64,11 @@ const commands = [
         name: '褲池領域',
         description: '夭夭說:「褲池領域」',
     },
+    {
+        name: '給褲',
+        description: '夭夭新用詞',
+    },
+
   ];
 //#endregion
 

@@ -32,14 +32,15 @@ client.on('interactionCreate', async interaction => {
     break;
 
     case '夭夭放技能':
-    const skillAry = ['奔褲衝', '鎖擒褲', '破褲','絕對守褲','飛褲','降褲']
-    await interaction.reply(skillAry[(number%6)]);
+    const skillAry = ['奔褲衝', '鎖擒褲', '破褲','絕對守褲','飛褲','降褲','給～～～～～褲！(｀Д´)']
+    await interaction.reply(skillAry[(number%7)]);
     break;
 
     case '海夭占卜':
         const sayAry = ['你今天會衰', '小心被狗咬褲子', '你好像有點好運','天吶~你出運了!','你頭上一個字『危』',
-        '大吉大利今晚吃雞','小心上廁所沒衛生紙','今天會被騙財~','今天會被騙色~','你今天會跟茶茶一樣好運!']
-        await interaction.reply(sayAry[(number%10)]);
+        '大吉大利今晚吃雞','小心上廁所沒衛生紙','今天會被騙財~','今天會被騙色~','你今天會跟茶茶一樣好運!',
+        '你今天的幸運顏色是:垃圾~ㄏㄏ','今日不宜太靠北!邊走']
+        await interaction.reply(sayAry[(number%12)]);
         break;
 
     case '夭夭抽卡':
@@ -89,6 +90,10 @@ client.on('interactionCreate', async interaction => {
 
     case '褲池領域':
         await interaction.reply('褲池·領域');
+    break;
+
+    case '給褲':
+        await interaction.reply('給～～～～～褲！(｀Д´)');
     break;
   }
 
