@@ -27,7 +27,7 @@ client.on('interactionCreate', async interaction => {
 
   switch(interaction.commandName){
     case '夭夭打招呼':
-        const HiAry =['去鼠la','請去你ㄇㄉ','你啥小','敲理嗎']
+        const HiAry =['去鼠la','請去你ㄇㄉ','你啥小','敲理嗎'];
         await interaction.reply(HiAry[(number%4)]);
     break;
 
@@ -37,10 +37,32 @@ client.on('interactionCreate', async interaction => {
     break;
 
     case '海夭占卜':
+
         const sayAry = ['你今天會衰', '小心被狗咬褲子', '你好像有點好運','天吶~你出運了!','你頭上一個字『危』',
         '大吉大利今晚吃雞','小心上廁所沒衛生紙','今天會被騙財~','今天會被騙色~','你今天會跟茶茶一樣lucky!',
-        '你今天的幸運顏色是:垃圾~ㄏㄏ','今日不宜太靠北!邊走']
-        await interaction.reply(sayAry[(number%12)]);
+        '你今天的幸運顏色是:垃圾~ㄏㄏ','今日不宜太靠北!邊走', '愛轉角遇見了誰~哈哈 是阿福啦>0<', '今日貴人星座:天秤座!!!!! 請對身邊的天秤友善一點',
+        '你今天吃葡萄不用吐葡萄皮'];
+
+        // 11星座(排除天秤座)
+        const constellation = [
+            '牡羊座',
+            '金牛座',
+            '雙子座',
+            '巨蟹座',
+            '獅子座',
+            '處女座',
+            '天蠍座',
+            '射手座',
+            '摩羯座',
+            '水瓶座',
+            '雙魚座'
+        ];
+        const startCount = constellation.length;
+        const startStr = interaction.reply(constellation[(number%startCount)]);
+        const add = '今日小人星座:' + startStr + ' ~NONO~';
+        sayAry.push(add);
+        const count = sayAry.length;
+        await interaction.reply(sayAry[(number%count)]);
         break;
 
     case '夭夭抽卡':
@@ -48,8 +70,15 @@ client.on('interactionCreate', async interaction => {
         const attachment = new AttachmentBuilder('./src/img/'+ i +'.png', { name: i+'.png' })
         const embed = new EmbedBuilder()
         .setTitle('你去鼠la')
-        await interaction.reply({embeds: [embed], files: [attachment]})
+        await interaction.reply({embeds: [embed], files: [attachment]});
         
+    break;
+
+    case '夭夭褲子穿好':
+        let z = (number%6) == 0 ? 1 : (number%6);
+        const returnAtt = new AttachmentBuilder('./src/img/hey/'+ i +'.jpg', { name: i+'.jpg' })
+        const e = new EmbedBuilder().setTitle('夭夭:?????');
+        await interaction.reply({embeds: [e], files: [returnAtt]});
     break;
 
     case '萬褲歸一':

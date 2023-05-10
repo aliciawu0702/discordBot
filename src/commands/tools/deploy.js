@@ -25,6 +25,10 @@ const commands = [
         description: '翻開覆蓋的卡',
     },
     {
+        name:'夭夭褲子穿好',
+        description:'感謝菜鵝提供圖',
+    },
+    {
         name: '萬褲歸一',
         description: '夭夭說:「萬褲歸一」',
     },
