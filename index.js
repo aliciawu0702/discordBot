@@ -76,7 +76,7 @@ client.on('interactionCreate', async interaction => {
 
     case '夭夭褲子穿好':
         let z = (number%6) == 0 ? 1 : (number%6);
-        const returnAtt = new AttachmentBuilder('./src/img/hey/'+ i +'.jpg', { name: i+'.jpg' })
+        const returnAtt = new AttachmentBuilder('./src/img/hey/'+ i +'.png', { name: i+'.png' })
         const e = new EmbedBuilder().setTitle('夭夭:?????');
         await interaction.reply({embeds: [e], files: [returnAtt]});
     break;
