@@ -58,9 +58,9 @@ client.on('interactionCreate', async interaction => {
             '雙魚座'
         ];
         const startCount = constellation.length;
-        const startStr = interaction.reply(constellation[(number%startCount)]);
+        const startStr =constellation[(number%startCount)];
         const add = '今日小人星座:' + startStr + ' ~NONO~';
-        sayAry.push(add);
+
         const count = sayAry.length;
         await interaction.reply(sayAry[(number%count)]);
         break;
